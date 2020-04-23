@@ -149,7 +149,6 @@ class SearchResultsTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.prepareForReuse()
         cell.setupCellWithModel(cellViewModel)
         
         return cell
