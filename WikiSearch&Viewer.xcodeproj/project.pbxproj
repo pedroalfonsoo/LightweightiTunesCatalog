@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E156190224515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156190124515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift */; };
+		E1788AE7245198C3004DB8F5 /* WikiPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AE6245198C3004DB8F5 /* WikiPageTableViewCell.swift */; };
+		E1788AE92451DB0F004DB8F5 /* SearchResultsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */; };
 		E1A15FB2244E4D26008EF7DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */; };
 		E1A15FB4244E4D26008EF7DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */; };
-		E1A15FB6244E4D26008EF7DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB5244E4D26008EF7DD /* ViewController.swift */; };
-		E1A15FB9244E4D26008EF7DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A15FB7244E4D26008EF7DD /* Main.storyboard */; };
 		E1A15FBB244E4D27008EF7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A15FBA244E4D27008EF7DD /* Assets.xcassets */; };
-		E1A15FBE244E4D27008EF7DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A15FBC244E4D27008EF7DD /* LaunchScreen.storyboard */; };
 		E1A15FC9244E4D28008EF7DD /* WikiSearch_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FC8244E4D28008EF7DD /* WikiSearch_ViewerTests.swift */; };
+		E1A15FE3244E5134008EF7DD /* HttpTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE2244E5134008EF7DD /* HttpTransport.swift */; };
+		E1A15FE5244E51CC008EF7DD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE4244E51CC008EF7DD /* LaunchViewController.swift */; };
+		E1A15FE7244E5265008EF7DD /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE6244E5265008EF7DD /* SearchResultsTableViewController.swift */; };
+		E1A15FE9244E6331008EF7DD /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE8244E6331008EF7DD /* SearchResultsViewModel.swift */; };
+		E1A15FEF244E6516008EF7DD /* WikiSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FEE244E6516008EF7DD /* WikiSearchService.swift */; };
+		E1A15FF1244E8000008EF7DD /* WikiPageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FF0244E8000008EF7DD /* WikiPageProperties.swift */; };
+		E1C80B1C244EAFA500DA7122 /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C80B1B244EAFA500DA7122 /* WebContentViewController.swift */; };
+		E1C80B1E244F4ECD00DA7122 /* UIView+FadeIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C80B1D244F4ECD00DA7122 /* UIView+FadeIn.swift */; };
+		E1EA0D18244F97C10020EC39 /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EA0D17244F97C10020EC39 /* UIViewController+Spinner.swift */; };
+		E1EA0D1A244F9A430020EC39 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EA0D19244F9A430020EC39 /* String+DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +37,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E156190124515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReloadWithAnimation.swift"; sourceTree = "<group>"; };
+		E1788AE6245198C3004DB8F5 /* WikiPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPageTableViewCell.swift; sourceTree = "<group>"; };
+		E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModelTest.swift; sourceTree = "<group>"; };
 		E1A15FAE244E4D26008EF7DD /* WikiSearch&Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WikiSearch&Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1A15FB5244E4D26008EF7DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1A15FB8244E4D26008EF7DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1A15FBA244E4D27008EF7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E1A15FBD244E4D27008EF7DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A15FBF244E4D27008EF7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A15FC4244E4D28008EF7DD /* WikiSearch&ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WikiSearch&ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A15FC8244E4D28008EF7DD /* WikiSearch_ViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearch_ViewerTests.swift; sourceTree = "<group>"; };
 		E1A15FCA244E4D28008EF7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1A15FE2244E5134008EF7DD /* HttpTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTransport.swift; sourceTree = "<group>"; };
+		E1A15FE4244E51CC008EF7DD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		E1A15FE6244E5265008EF7DD /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		E1A15FE8244E6331008EF7DD /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
+		E1A15FEE244E6516008EF7DD /* WikiSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchService.swift; sourceTree = "<group>"; };
+		E1A15FF0244E8000008EF7DD /* WikiPageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPageProperties.swift; sourceTree = "<group>"; };
+		E1C80B1B244EAFA500DA7122 /* WebContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
+		E1C80B1D244F4ECD00DA7122 /* UIView+FadeIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FadeIn.swift"; sourceTree = "<group>"; };
+		E1EA0D17244F97C10020EC39 /* UIViewController+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Spinner.swift"; sourceTree = "<group>"; };
+		E1EA0D19244F9A430020EC39 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +99,13 @@
 		E1A15FB0244E4D26008EF7DD /* WikiSearch&Viewer */ = {
 			isa = PBXGroup;
 			children = (
-				E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */,
-				E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */,
-				E1A15FB5244E4D26008EF7DD /* ViewController.swift */,
-				E1A15FB7244E4D26008EF7DD /* Main.storyboard */,
-				E1A15FBA244E4D27008EF7DD /* Assets.xcassets */,
-				E1A15FBC244E4D27008EF7DD /* LaunchScreen.storyboard */,
-				E1A15FBF244E4D27008EF7DD /* Info.plist */,
+				E1A15FD8244E4D73008EF7DD /* Views */,
+				E1A15FD6244E4D66008EF7DD /* ViewModels */,
+				E1A15FD4244E4D53008EF7DD /* Models */,
+				E1A15FDA244E4D80008EF7DD /* Managers */,
+				E1A15FED244E649B008EF7DD /* Services */,
+				E1A15FDC244E4D88008EF7DD /* Extensions */,
+				E1A15FDD244E4DC4008EF7DD /* SupportFiles */,
 			);
 			path = "WikiSearch&Viewer";
 			sourceTree = "<group>";
@@ -97,6 +117,72 @@
 				E1A15FCA244E4D28008EF7DD /* Info.plist */,
 			);
 			path = "WikiSearch&ViewerTests";
+			sourceTree = "<group>";
+		};
+		E1A15FD4244E4D53008EF7DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1A15FF0244E8000008EF7DD /* WikiPageProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1A15FD6244E4D66008EF7DD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E1A15FE8244E6331008EF7DD /* SearchResultsViewModel.swift */,
+				E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E1A15FD8244E4D73008EF7DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1A15FE4244E51CC008EF7DD /* LaunchViewController.swift */,
+				E1A15FE6244E5265008EF7DD /* SearchResultsTableViewController.swift */,
+				E1C80B1B244EAFA500DA7122 /* WebContentViewController.swift */,
+				E1788AE6245198C3004DB8F5 /* WikiPageTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1A15FDA244E4D80008EF7DD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E1A15FE2244E5134008EF7DD /* HttpTransport.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E1A15FDC244E4D88008EF7DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1C80B1D244F4ECD00DA7122 /* UIView+FadeIn.swift */,
+				E1EA0D17244F97C10020EC39 /* UIViewController+Spinner.swift */,
+				E1EA0D19244F9A430020EC39 /* String+DateFormatter.swift */,
+				E156190124515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1A15FDD244E4DC4008EF7DD /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E1A15FBA244E4D27008EF7DD /* Assets.xcassets */,
+				E1A15FBF244E4D27008EF7DD /* Info.plist */,
+				E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */,
+				E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		E1A15FED244E649B008EF7DD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1A15FEE244E6516008EF7DD /* WikiSearchService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A15FBE244E4D27008EF7DD /* LaunchScreen.storyboard in Resources */,
 				E1A15FBB244E4D27008EF7DD /* Assets.xcassets in Resources */,
-				E1A15FB9244E4D26008EF7DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +284,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A15FB6244E4D26008EF7DD /* ViewController.swift in Sources */,
+				E1A15FE3244E5134008EF7DD /* HttpTransport.swift in Sources */,
+				E1C80B1C244EAFA500DA7122 /* WebContentViewController.swift in Sources */,
+				E1EA0D1A244F9A430020EC39 /* String+DateFormatter.swift in Sources */,
 				E1A15FB2244E4D26008EF7DD /* AppDelegate.swift in Sources */,
+				E156190224515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift in Sources */,
+				E1A15FE7244E5265008EF7DD /* SearchResultsTableViewController.swift in Sources */,
 				E1A15FB4244E4D26008EF7DD /* SceneDelegate.swift in Sources */,
+				E1A15FEF244E6516008EF7DD /* WikiSearchService.swift in Sources */,
+				E1A15FE5244E51CC008EF7DD /* LaunchViewController.swift in Sources */,
+				E1788AE7245198C3004DB8F5 /* WikiPageTableViewCell.swift in Sources */,
+				E1EA0D18244F97C10020EC39 /* UIViewController+Spinner.swift in Sources */,
+				E1C80B1E244F4ECD00DA7122 /* UIView+FadeIn.swift in Sources */,
+				E1A15FF1244E8000008EF7DD /* WikiPageProperties.swift in Sources */,
+				E1A15FE9244E6331008EF7DD /* SearchResultsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1788AE92451DB0F004DB8F5 /* SearchResultsViewModelTest.swift in Sources */,
 				E1A15FC9244E4D28008EF7DD /* WikiSearch_ViewerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,25 +319,6 @@
 			targetProxy = E1A15FC5244E4D28008EF7DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E1A15FB7244E4D26008EF7DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1A15FB8244E4D26008EF7DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E1A15FBC244E4D27008EF7DD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1A15FBD244E4D27008EF7DD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E1A15FCB244E4D28008EF7DD /* Debug */ = {
@@ -365,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW28WTZGPT;
 				INFOPLIST_FILE = "WikiSearch&Viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW28WTZGPT;
 				INFOPLIST_FILE = "WikiSearch&Viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
