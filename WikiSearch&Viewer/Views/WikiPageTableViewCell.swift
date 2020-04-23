@@ -50,8 +50,6 @@ class WikiPageTableViewCell: UITableViewCell {
     static let cellReuseIdentifier = "WikiPageTitleCell"
     
     private func setupConstraints() {
-        addSubview(stackView)
-        
         stackView.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12).isActive = true
         stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
@@ -66,6 +64,7 @@ class WikiPageTableViewCell: UITableViewCell {
         
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(lastEditedLabel)
+        addSubview(stackView)
                
         setupConstraints()
     }
