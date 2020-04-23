@@ -68,6 +68,8 @@ class SearchResultsTableViewController: UITableViewController {
     private func setupView() {
         searchBar.delegate = self
         navigationItem.titleView = searchBar
+        
+        navigationController?.setViewControllers([self], animated: false)
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barStyle = .default
