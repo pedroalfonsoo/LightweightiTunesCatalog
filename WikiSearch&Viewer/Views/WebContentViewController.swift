@@ -22,6 +22,19 @@ class WebContentViewController: UIViewController {
         return webView
     }()
     
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "SignPainter", size: 50.0)
+        label.adjustsFontSizeToFitWidth = true
+        label.textAlignment = .center
+        label.lineBreakMode = .byWordWrapping
+        label.textColor = .black
+        label.text = "Wiki Search & Viewer"
+        label.translatesAutoresizingMaskIntoConstraints = false
+           
+        return label
+    }()
+    
     private let urlToLoad: String
     weak var delegate: WebContentViewControllerDismissing?
     
@@ -55,8 +68,8 @@ class WebContentViewController: UIViewController {
     
     private func setupWebView() {
         view.addSubview(webView)
-        webView.navigationDelegate = self
         
+        webView.navigationDelegate = self
         webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         webView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -66,6 +79,12 @@ class WebContentViewController: UIViewController {
     private func loadWebContent() {
         guard let webContentURL = URL(string: urlToLoad) else {
             print("Unable to create the URL object.")
+            
+            webView.addSubview(titleLabel)
+            
+            titleLabel.centerXAnchor.constraint(equalTo: webView.centerXAnchor).isActive = true
+            titleLabel.centerYAnchor.constraint(equalTo: webView.centerYAnchor).isActive = true
+            
             return
         }
             
@@ -92,6 +111,7 @@ extension WebContentViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         stopActivityIndicatory()
+        titleLabel.removeFromSuperview()
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError: Error) {

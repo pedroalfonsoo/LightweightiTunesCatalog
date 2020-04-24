@@ -18,8 +18,9 @@ class WikiPageTableViewCell: UITableViewCell {
     private var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
            
         return stackView
@@ -52,15 +53,24 @@ class WikiPageTableViewCell: UITableViewCell {
     private func setupConstraints() {
         stackView.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -12).isActive = true
+        stackView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor,
+                                           constant: 12).isActive = true
+        stackView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor,
+                                            constant: -30).isActive = true
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         accessoryType = .disclosureIndicator
-        selectionStyle = .gray
+        selectionStyle = .none
+        
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.numberOfLines = 0
+        
+        lastEditedLabel.adjustsFontForContentSizeCategory = true
+        lastEditedLabel.lineBreakMode = .byWordWrapping
+        lastEditedLabel.numberOfLines = 0
         
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(lastEditedLabel)

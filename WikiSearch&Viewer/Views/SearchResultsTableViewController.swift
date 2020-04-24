@@ -68,10 +68,11 @@ class SearchResultsTableViewController: UITableViewController {
     private func setupView() {
         searchBar.delegate = self
         navigationItem.titleView = searchBar
+        definesPresentationContext = true
         
         navigationController?.setViewControllers([self], animated: false)
         navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarBackground"),
                                                                    for: .default)
@@ -84,7 +85,9 @@ class SearchResultsTableViewController: UITableViewController {
         tableView.register(WikiPageTableViewCell.self, forCellReuseIdentifier:
             WikiPageTableViewCell.cellReuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 57
+        tableView.estimatedRowHeight = 83
+        tableView.isScrollEnabled = false
+        tableView.bounces = false
         
         tableFooterView.frame = tableView.frame
         tableView.tableFooterView = tableFooterView
@@ -93,10 +96,12 @@ class SearchResultsTableViewController: UITableViewController {
     private func updateTableViewUI() {
         guard !(viewModel.searchResults?.isEmpty ?? true) else {
             showPopupAlert(title: "Search", message: "There are no results for \"\(searchBar.text ?? "")\"")
+            tableView.bounces = false
             return
         }
         
         tableView.isScrollEnabled = true
+        tableView.bounces = true
         tableView.tableFooterView = nil
         tableView.reloadDataWithAnimation(duration: 0.1)
     }
@@ -128,6 +133,7 @@ class SearchResultsTableViewController: UITableViewController {
                 }
             } catch {
                 self?.showPopupAlert(title: "Search Error", message: "Unable to retrieve result(s)")
+                self?.fetchMoreWikiPages = false
             }
         }
     }
@@ -163,9 +169,13 @@ class SearchResultsTableViewController: UITableViewController {
         guard let searchResults = viewModel.searchResults else { return }
         
         let webContentViewController = WebContentViewController(urlToLoad: searchResults[indexPath.row].fullurl)
-        webContentViewController.delegate = self
         
-        navigationController?.pushViewController(webContentViewController, animated: true)
+        webContentViewController.delegate = self
+        webContentViewController.navigationItem.leftItemsSupplementBackButton = true
+        webContentViewController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        
+        showDetailViewController(UINavigationController(rootViewController: webContentViewController),
+                                 sender: self)
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

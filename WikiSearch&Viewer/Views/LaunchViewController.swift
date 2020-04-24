@@ -23,6 +23,7 @@ class LaunchScreenViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "SignPainter", size: 50.0)
+        label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
         label.textColor = .white
@@ -31,6 +32,8 @@ class LaunchScreenViewController: UIViewController {
         
         return label
     }()
+    
+    private let splitViewController_ = SplitViewController(nibName: nil, bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +51,16 @@ class LaunchScreenViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // Will push the view controller that takes care of the search feature
+        let mainViewController = SearchResultsTableViewController(wikiSearchService:
+        WikiSearchService())
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.navigationController?.pushViewController(SearchResultsTableViewController(wikiSearchService: WikiSearchService()), animated: true)
+            self.navigationController?.pushViewController(mainViewController, animated: true)
+            self.splitViewController_.setupWithViewControllers(masterVC: mainViewController,
+                                                          detailVC: WebContentViewController(urlToLoad: ""))
+            // Root view controller of window
+            self.view.window?.rootViewController = self.splitViewController_
+            self.view.window?.makeKeyAndVisible()
         }
     }
     
@@ -62,8 +73,8 @@ class LaunchScreenViewController: UIViewController {
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
         titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         
         imageView.fadeIn(duration: 0.3)

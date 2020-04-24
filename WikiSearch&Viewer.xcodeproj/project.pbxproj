@@ -10,6 +10,7 @@
 		E156190224515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156190124515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift */; };
 		E1788AE7245198C3004DB8F5 /* WikiPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AE6245198C3004DB8F5 /* WikiPageTableViewCell.swift */; };
 		E1788AE92451DB0F004DB8F5 /* SearchResultsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */; };
+		E1788AED245245BE004DB8F5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AEC245245BE004DB8F5 /* SplitViewController.swift */; };
 		E1A15FB2244E4D26008EF7DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */; };
 		E1A15FB4244E4D26008EF7DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */; };
 		E1A15FBB244E4D27008EF7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A15FBA244E4D27008EF7DD /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		E156190124515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReloadWithAnimation.swift"; sourceTree = "<group>"; };
 		E1788AE6245198C3004DB8F5 /* WikiPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPageTableViewCell.swift; sourceTree = "<group>"; };
 		E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModelTest.swift; sourceTree = "<group>"; };
+		E1788AEC245245BE004DB8F5 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		E1A15FAE244E4D26008EF7DD /* WikiSearch&Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WikiSearch&Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				E1A15FE4244E51CC008EF7DD /* LaunchViewController.swift */,
 				E1A15FE6244E5265008EF7DD /* SearchResultsTableViewController.swift */,
 				E1C80B1B244EAFA500DA7122 /* WebContentViewController.swift */,
+				E1788AEC245245BE004DB8F5 /* SplitViewController.swift */,
 				E1788AE6245198C3004DB8F5 /* WikiPageTableViewCell.swift */,
 			);
 			path = Views;
@@ -289,6 +292,7 @@
 				E1EA0D1A244F9A430020EC39 /* String+DateFormatter.swift in Sources */,
 				E1A15FB2244E4D26008EF7DD /* AppDelegate.swift in Sources */,
 				E156190224515D6C00C09AA8 /* UITableView+ReloadWithAnimation.swift in Sources */,
+				E1788AED245245BE004DB8F5 /* SplitViewController.swift in Sources */,
 				E1A15FE7244E5265008EF7DD /* SearchResultsTableViewController.swift in Sources */,
 				E1A15FB4244E4D26008EF7DD /* SceneDelegate.swift in Sources */,
 				E1A15FEF244E6516008EF7DD /* WikiSearchService.swift in Sources */,
