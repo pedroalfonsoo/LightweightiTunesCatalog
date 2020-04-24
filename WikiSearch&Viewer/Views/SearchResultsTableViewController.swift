@@ -15,6 +15,7 @@ class SearchResultsTableViewController: UITableViewController {
         searchBar.showsCancelButton = true
         searchBar.placeholder = "Search on Wikipedia..."
         searchBar.searchTextField.backgroundColor = .white
+        searchBar.searchTextField.textColor = .black
            
         return searchBar
     }()
