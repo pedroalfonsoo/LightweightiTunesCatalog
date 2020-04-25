@@ -52,6 +52,11 @@ class SearchResultsViewModelTest: XCTestCase {
         XCTAssertEqual(sut?.resultsOffset, 0)
     }
     
+    func test_setSearchResults() {
+        sut?.setAndSortSearchResults(searchResults: response?.extraResult ?? [])
+        XCTAssertEqual(sut?.searchResults, response?.extraResult)
+    }
+    
     func test_incrementOffset() {
         sut?.incrementOffset()
         XCTAssertEqual(sut?.resultsOffset, sut?.offset)

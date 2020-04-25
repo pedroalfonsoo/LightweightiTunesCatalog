@@ -59,11 +59,10 @@ class SearchResultsTableViewController: UITableViewController {
         setupView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        navigationController?.navigationBar.isHidden = false
-        navigationItem.setHidesBackButton(true, animated: false)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.view.setNeedsLayout()
     }
     
     private func setupView() {
@@ -74,9 +73,7 @@ class SearchResultsTableViewController: UITableViewController {
         navigationController?.setViewControllers([self], animated: false)
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarBackground"),
-                                                                   for: .default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarBackground"), for: .default)
         setupTableView()
     }
     
@@ -107,7 +104,7 @@ class SearchResultsTableViewController: UITableViewController {
         tableView.reloadDataWithAnimation(duration: 0.1)
     }
     
-    private func fetchResults() {
+    private func fetchResults(completionHandler: (() -> ())? = nil) {
         fetchMoreWikiPages = false
         showActivityIndicatory(style: .large, color: .black)
         
@@ -119,11 +116,11 @@ class SearchResultsTableViewController: UITableViewController {
             
             do {
                 let searchResult = try response() as? WikiPageProperties
-
                 
                 if self?.viewModel.resultsOffset == 0 {
-                    self?.viewModel = SearchResultsViewModel(searchText: self?.viewModel.searchText ?? "",
-                                                             searchResults: searchResult?.query.pages.properties)
+                    self?.viewModel.setAndSortSearchResults(searchResults:
+                        searchResult?.query.pages.properties ?? [])
+                    (completionHandler ?? {})()
                 } else {
                     self?.viewModel.updateSearchResultsWithOffset(offsetResults:
                         searchResult?.query.pages.properties)
@@ -170,13 +167,9 @@ class SearchResultsTableViewController: UITableViewController {
         guard let searchResults = viewModel.searchResults else { return }
         
         let webContentViewController = WebContentViewController(urlToLoad: searchResults[indexPath.row].fullurl)
-        
-        webContentViewController.delegate = self
-        webContentViewController.navigationItem.leftItemsSupplementBackButton = true
-        webContentViewController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-        
-        showDetailViewController(UINavigationController(rootViewController: webContentViewController),
-                                 sender: self)
+         webContentViewController.delegate = self
+       
+        showDetailViewController(UINavigationController(rootViewController: webContentViewController), sender: self)
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -196,8 +189,16 @@ extension SearchResultsTableViewController: UISearchBarDelegate {
         guard let searchBarText = searchBar.text else { return }
         
         viewModel.setSearchToInitialState(searchText: searchBarText)
-        fetchResults()
         searchBar.resignFirstResponder()
+        
+        fetchResults() { [weak self] in
+            DispatchQueue.main.async {
+                if self?.tableView.numberOfRows(inSection: 0) ?? 0 > 0 {
+                    self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0),
+                                                at: .top, animated: true)
+                }
+            }
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

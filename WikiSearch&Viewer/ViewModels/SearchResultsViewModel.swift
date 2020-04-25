@@ -19,8 +19,6 @@ class SearchResultsViewModel {
     init(searchText: String, searchResults: [PageProperties]?) {
         self.searchText = searchText
         self.searchResults = searchResults
-        
-        self.searchResults?.sort(by: { $0.title < $1.title })
     }
     
     func getCellViewModelForRow(_ rowIndex: Int) -> ResultCellViewModel? {
@@ -36,6 +34,11 @@ class SearchResultsViewModel {
     func setSearchToInitialState(searchText: String) {
         self.searchText = searchText
         resultsOffset = 0
+    }
+    
+    func setAndSortSearchResults(searchResults: [PageProperties]) {
+        self.searchResults = searchResults
+        self.searchResults?.sort(by: { $0.title < $1.title })
     }
     
     func incrementOffset() {

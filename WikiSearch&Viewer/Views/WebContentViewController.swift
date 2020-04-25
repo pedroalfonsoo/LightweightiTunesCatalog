@@ -52,16 +52,13 @@ class WebContentViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         loadWebContent()
     }
     
     private func setupView() {
-        view.backgroundColor = .white
+        navigationItem.leftItemsSupplementBackButton = true
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        extendedLayoutIncludesOpaqueBars = true
         
         setupWebView()
     }
@@ -70,6 +67,7 @@ class WebContentViewController: UIViewController {
         view.addSubview(webView)
         
         webView.navigationDelegate = self
+        webView.scrollView.bounces = false
         webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         webView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true

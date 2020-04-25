@@ -77,6 +77,6 @@ class LaunchScreenViewController: UIViewController {
         titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
         titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         
-        imageView.fadeIn(duration: 0.3)
+        imageView.fadeIn(duration: 0.7)
     }
 }

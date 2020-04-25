@@ -12,20 +12,20 @@ typealias PageProperties = WikiPageProperties.Page
 
 // Structure for the entire API Response from Wikipedia
 
-struct WikiPageProperties: Codable {
+struct WikiPageProperties: Codable, Equatable {
     let query: Query
     
-    struct Query: Codable {
+    struct Query: Codable, Equatable {
         let pages: PageResults
     }
 
-    struct Page: Codable {
+    struct Page: Codable, Equatable {
         let title: String
         let touched: String
         let fullurl: String
     }
     
-    struct PageResults: Codable {
+    struct PageResults: Codable, Equatable {
         let properties: [Page]
         
         init(from decoder: Decoder) throws {

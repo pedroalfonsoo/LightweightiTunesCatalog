@@ -43,6 +43,7 @@ class WikiPageTableViewCell: UITableViewCell {
         label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .left
         label.lineBreakMode = .byWordWrapping
+        label.setContentHuggingPriority(.defaultHigh, for: .vertical)
         label.translatesAutoresizingMaskIntoConstraints = false
            
         return label
@@ -51,8 +52,8 @@ class WikiPageTableViewCell: UITableViewCell {
     static let cellReuseIdentifier = "WikiPageTitleCell"
     
     private func setupConstraints() {
-        stackView.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12).isActive = true
+        stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 12).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -12).isActive = true
         stackView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor,
                                            constant: 12).isActive = true
         stackView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor,
@@ -75,6 +76,7 @@ class WikiPageTableViewCell: UITableViewCell {
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(lastEditedLabel)
         addSubview(stackView)
+        stackView.layoutIfNeeded()
                
         setupConstraints()
     }

@@ -14,7 +14,6 @@
 		E1A15FB2244E4D26008EF7DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */; };
 		E1A15FB4244E4D26008EF7DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */; };
 		E1A15FBB244E4D27008EF7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A15FBA244E4D27008EF7DD /* Assets.xcassets */; };
-		E1A15FC9244E4D28008EF7DD /* WikiSearch_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FC8244E4D28008EF7DD /* WikiSearch_ViewerTests.swift */; };
 		E1A15FE3244E5134008EF7DD /* HttpTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE2244E5134008EF7DD /* HttpTransport.swift */; };
 		E1A15FE5244E51CC008EF7DD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE4244E51CC008EF7DD /* LaunchViewController.swift */; };
 		E1A15FE7244E5265008EF7DD /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FE6244E5265008EF7DD /* SearchResultsTableViewController.swift */; };
@@ -48,7 +47,6 @@
 		E1A15FBA244E4D27008EF7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A15FBF244E4D27008EF7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A15FC4244E4D28008EF7DD /* WikiSearch&ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WikiSearch&ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A15FC8244E4D28008EF7DD /* WikiSearch_ViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearch_ViewerTests.swift; sourceTree = "<group>"; };
 		E1A15FCA244E4D28008EF7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A15FE2244E5134008EF7DD /* HttpTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTransport.swift; sourceTree = "<group>"; };
 		E1A15FE4244E51CC008EF7DD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		E1A15FC7244E4D28008EF7DD /* WikiSearch&ViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1A15FC8244E4D28008EF7DD /* WikiSearch_ViewerTests.swift */,
 				E1A15FCA244E4D28008EF7DD /* Info.plist */,
 			);
 			path = "WikiSearch&ViewerTests";
@@ -310,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1788AE92451DB0F004DB8F5 /* SearchResultsViewModelTest.swift in Sources */,
-				E1A15FC9244E4D28008EF7DD /* WikiSearch_ViewerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW28WTZGPT;
 				INFOPLIST_FILE = "WikiSearch&ViewerTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TW28WTZGPT;
 				INFOPLIST_FILE = "WikiSearch&ViewerTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
