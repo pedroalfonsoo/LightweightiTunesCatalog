@@ -12,7 +12,6 @@
 		E112A790245CC77E00B427E6 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112A78F245CC77E00B427E6 /* SegmentedControl.swift */; };
 		E156190224515D6C00C09AA8 /* UICollectionView+ReloadWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156190124515D6C00C09AA8 /* UICollectionView+ReloadWithAnimation.swift */; };
 		E1788AE7245198C3004DB8F5 /* EntityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AE6245198C3004DB8F5 /* EntityCollectionViewCell.swift */; };
-		E1788AE92451DB0F004DB8F5 /* SearchResultsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */; };
 		E1A15FB2244E4D26008EF7DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */; };
 		E1A15FB4244E4D26008EF7DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */; };
 		E1A15FBB244E4D27008EF7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A15FBA244E4D27008EF7DD /* Assets.xcassets */; };
@@ -41,7 +40,6 @@
 		E112A78F245CC77E00B427E6 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		E156190124515D6C00C09AA8 /* UICollectionView+ReloadWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReloadWithAnimation.swift"; sourceTree = "<group>"; };
 		E1788AE6245198C3004DB8F5 /* EntityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityCollectionViewCell.swift; sourceTree = "<group>"; };
-		E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModelTest.swift; sourceTree = "<group>"; };
 		E1A15FAE244E4D26008EF7DD /* LightweightiTunesCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightweightiTunesCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A15FB1244E4D26008EF7DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A15FB3244E4D26008EF7DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				E1A15FE8244E6331008EF7DD /* SearchResultsViewModel.swift */,
-				E1788AE82451DB0F004DB8F5 /* SearchResultsViewModelTest.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1788AE92451DB0F004DB8F5 /* SearchResultsViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
