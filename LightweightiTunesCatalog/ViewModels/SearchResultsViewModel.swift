@@ -113,11 +113,11 @@ struct SearchResultsViewModel {
     }
     
     private static func populateByKind(source: EntityKind?) -> [[Entity]?] {
-        guard let source = source else {
-            return []
-        }
-        
         var array = [[Entity]?]()
+        
+        guard let source = source else {
+            return Array(repeating: [], count: MediaTypes.allCases.count)
+        }
         
         array.append(source.album)
         array.append(source.artist)
